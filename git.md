@@ -42,6 +42,27 @@ ssh
 `ssh-keygen -t rsa -C "这里输入你在 GitHub 的注册邮箱"`
 
 ```
-git push --set-upstream origin branch_name：设置本地的branch_name分支对
-应远程仓库的branch_name分支
+将本地代码推送到远程指定分支
+git push origin <指定的分支名> -f  // -f加上就是强制 -d可以删除远程分支
+git push origin dev:master  
+
+git pull origin main:master
+来拉取并合并远程的main分支到本地的master分支
+
+从远程指定分支上拉取代码
+git clone -b  <指定分支名>  <ssh或者http地址>
+
+如果第一次create远程的git仓库，将本地与仓库和远程仓库联系
+git remote add origin <远程仓库ssh或者http地址>
+
+
+
+```
+
+**代码回滚**
+```
+git reset --hard HEAD^ 或git reset --hard HEAD~ ：将代码库回滚到上一个版本
+git reset --hard HEAD^^：往上回滚两次，以此类推
+git reset --hard HEAD~100：往上回滚100个版本
+git reset --hard 版本号：回滚到某一特定版本
 ```
