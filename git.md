@@ -34,6 +34,13 @@ git merge branch_name：将分支branch_name合并到当前分支上
 ```
 
 **远程仓库**
+
+ssh
+检查有没有ssh
+`cd ~/.ssh && ls`
+如果没有 SSH Key，就要输入以下命令行生成：
+`ssh-keygen -t rsa -C "这里输入你在 GitHub 的注册邮箱"`
+
 ```
 git push --set-upstream origin branch_name：设置本地的branch_name分支对
 应远程仓库的branch_name分支
